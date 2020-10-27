@@ -10,7 +10,8 @@
         const url = document.getElementById('inp').value;
         fetch(url)
         .then((res)=>{
-            document.getElementById('inp').value = res.text();
+            //document.getElementById('inp').value = res.text();
+            document.getElementById('inp').value = 'yes';
         });
     }
     document.getElementById('bt').addEventListener('click', getResult);
