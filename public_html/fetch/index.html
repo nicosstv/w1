@@ -1,7 +1,19 @@
-<html>
+<html lang="en">
 <head>
+    <title>Week 3. Fetch</title>
 </head>
 <body>
-<input />
+<label for="inp">URL/Result</label><input id="inp" />
+<button id="bt">Click</button>
+<script>
+    function getResult() {
+        const url = document.getElementById('inp').value;
+        fetch(url)
+        .then((res)=>{
+            document.getElementById('inp').value = res.text();
+        });
+    }
+    document.getElementById('bt').addEventListener('click', getResult);
+</script>
 </body>
 </html>
