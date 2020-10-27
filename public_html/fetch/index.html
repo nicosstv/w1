@@ -9,9 +9,9 @@
     function getResult() {
         const url = document.getElementById('inp').value;
         fetch(url)
+        .then(x => x.text())
         .then((res)=>{
-            //document.getElementById('inp').value = res.text();
-            document.getElementById('inp').value = 'yes';
+            document.getElementById('inp').value = res;
         });
     }
     document.getElementById('bt').addEventListener('click', getResult);
