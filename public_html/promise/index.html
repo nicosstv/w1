@@ -1,3 +1,4 @@
-function task(x) {
-  return (x<18) ? Promise.resolve('yes') : Promise.reject();
+async function task(x) {
+  let result = await (x<18) ? Promise.resolve('yes') : Promise.reject();
+  return result;
 }
